@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Bank Dashboard</title>
+  <link href="assets/css/styles.css" rel="stylesheet" />
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Shown only when NOT authenticated (controlled by main.js) -->
+  <div id="auth-cta" class="auth-cta" style="display:none;">
+    <div class="container auth-cta__inner">
+      <span>You’re viewing public mode.</span>
+      <div class="auth-cta__actions">
+        <a class="btn" href="login.html">Login</a>
+        <a class="btn btn-secondary" href="register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <h1>Digital Bank</h1>
+      <nav>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="accounts.html">Accounts</a></li>
+          <li><a href="transactions.html">Transactions</a></li>
+          <li><a href="loans.html">Loans</a></li>
+          <li><a href="notifications.html">Notifications</a></li>
+          <li><a href="payments.html">Payments</a></li>
+          <li><a href="#" id="logout-btn">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container dashboard">
+    <section class="welcome-section">
+      <h2>Welcome to Your Digital Bank Dashboard</h2>
+      <p>Manage your accounts, transactions, loans, notifications, and payments all in one place.</p>
+    </section>
+    <section class="status-cards">
+      <div class="card" id="account-summary">
+        <h3>Account Summary</h3>
+        <div id="account-info">Loading...</div>
+      </div>
+      <div class="card" id="recent-transactions">
+        <h3>Recent Transactions</h3>
+        <div id="transactions-info">Loading...</div>
+      </div>
+      <div class="card" id="loan-status">
+        <h3>Loan Status</h3>
+        <div id="loan-info">Loading...</div>
+      </div>
+      <div class="card" id="notifications">
+        <h3>Notifications</h3>
+        <div id="notifications-info">Loading...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Digital Bank. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

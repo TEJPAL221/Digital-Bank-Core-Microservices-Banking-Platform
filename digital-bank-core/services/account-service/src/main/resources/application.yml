@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update   # Use 'update' for auto schema update in dev
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+  flyway:
+    enabled: false   # Disable Flyway for H2 by default; enable if using compatible migrations
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+jwt:
+  secret: ngZL34bDMFQizCBRay0rcOs982hmkW5T
+  expiration-ms: 86400000   # 1 day in milliseconds
